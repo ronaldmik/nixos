@@ -13,6 +13,7 @@
     };
 
     extraConfig = {
+      init.defaultBranch = "main";
       gpg = {
         format = "ssh";
         ssh.allowedSignersFile = "~/.ssh/allowed_signers";
