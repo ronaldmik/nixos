@@ -164,6 +164,11 @@
         "keepaspectratio, title:^(Picture-in-Picture)$"
         "noblur, tag:games*"
         "fullscreen, tag:games*"
+
+        "tag +jb, class:^jetbrains-.+$,floating:1"
+        "stayfocused, tag:jb"
+        "noinitialfocus, tag:jb"
+        "focusonactivate, class:^jetbrains-(?!toolbox)"
       ];
     };
   };
