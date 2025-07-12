@@ -15,5 +15,13 @@
         "${pkgs.liquidctl}/bin/liquidctl --match kraken set fan speed 20 20 30 30 35 50 40 80 45 90 50 100"
       ];
     };
+    script = ''
+      for i in /sys/class/hwmon/hwmon*/temp*_input; 
+      do
+        if [[ "$(<$(dirname $i)/name)" == "kraken2023elite" ]]; then 
+          ln -sf $i /var/kraken_coolant_temp_input
+        fi
+      done
+    '';
   };
 }

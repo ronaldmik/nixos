@@ -91,9 +91,7 @@ in
           "temperature" = {
             interval = 5;
             format = "󱃂 {temperatureC}°C";
-            # Find hwmon device: https://github.com/Alexays/Waybar/wiki/Module:-Temperature
-            # for i in /sys/class/hwmon/hwmon*/temp*_input; do echo "$(<$(dirname $i)/name): $(cat ${i%_*}_label 2>/dev/null || echo $(basename ${i%_*})) $(readlink -f $i)"; done
-            hwmon-path = "/sys/devices/pci0000:00/0000:00:01.2/0000:20:00.0/0000:21:08.0/0000:2a:00.3/usb3/3-6/3-6.4/3-6.4:1.0/0003:1E71:170E.0009/hwmon/hwmon4/temp1_input";
+            hwmon-path = "/var/kraken_coolant_temp_input";
             critical-threshold = 60;
             format-critical = "󰸁 {temperatureC}°C"; 
           };
