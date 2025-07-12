@@ -90,10 +90,10 @@ in
           };
           "temperature" = {
             interval = 5;
-            format = "󱃂 {temperatureC}°C";
+            format = " {temperatureC}°C";
             hwmon-path = "/var/kraken_coolant_temp_input";
-            critical-threshold = 60;
-            format-critical = "󰸁 {temperatureC}°C"; 
+            critical-threshold = 50;
+            format-critical = " {temperatureC}°C"; 
           };
           "disk" = {
             format = " {free}";
@@ -103,8 +103,8 @@ in
           };
           "network" = {
             format-icons = ["󰤯" "󰤟" "󰤢" "󰤥" "󰤨"];
-            format-ethernet = " {bandwidthDownBits}";
-            format-wifi = " {bandwidthDownBits}";
+            format-ethernet = " {bandwidthDownBits}  {bandwidthUpBits}";
+            format-wifi = " {bandwidthDownBits}  {bandwidthUpBits}";
             format-disconnected = "󰤮";
             tooltip = false;
             on-click = "${terminal} -e btop";
@@ -327,7 +327,14 @@ in
               padding: 2px 20px;
           }
           #temperature {
-            color: #${base09};
+            color: #${base0D};
+            background: #${base00};
+            border-radius: 50px 15px 50px 15px;
+            margin: 5px;
+            padding: 2px 20px;
+          }
+          #temperature.critical {
+            color: #${base08};
             background: #${base00};
             border-radius: 50px 15px 50px 15px;
             margin: 5px;
