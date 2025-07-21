@@ -11,7 +11,7 @@
       Type = "oneshot";
       ExecStart = [
         "${pkgs.liquidctl}/bin/liquidctl initialize all"
-        "${pkgs.liquidctl}/bin/liquidctl --match kraken set pump speed 20 50 30 55 40 60 50 75 60 100"
+        "${pkgs.liquidctl}/bin/liquidctl --match kraken set pump speed 20 60 30 60 32 65 34 70 36 75 37 80 38 85 39 90 40 100"
         "${pkgs.liquidctl}/bin/liquidctl --match kraken set fan speed 20 20 30 30 35 50 40 80 45 90 50 100"
       ];
     };
