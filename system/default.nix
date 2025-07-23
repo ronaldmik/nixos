@@ -16,6 +16,7 @@
     ./system.nix
     ./thunar.nix
     ./user.nix
+    ./virtualisation.nix
     ./xserver.nix
     stylix.nixosModules.stylix
   ];

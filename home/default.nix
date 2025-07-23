@@ -11,6 +11,7 @@
     ./stylix.nix
     ./ssh.nix
     ./swaync.nix
+    ./virtmanager.nix
     walker.homeManagerModules.default
     ./walker.nix
     ./waybar.nix
